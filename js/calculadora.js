@@ -52,3 +52,4 @@ function dividir() {
   
   document.getElementById("resultadoDiv").innerHTML = divisao;
 }
+
