@@ -8,8 +8,6 @@ function somar() {
   
   const soma = numero1 + numero2
   
-  console.log(`O resultado da operação é ${soma}.`)
-
   document.getElementById("resultadoSoma").innerHTML = soma;
 }
 
@@ -22,9 +20,7 @@ function subtrair() {
   /* use as constantes numero 1 e numero 2 e realize a subtração entre elas.
    Em seguida, ao invés de mostrar o numero 9, mostre o resultado da operação */
   
-  const subtracao = numero1 - numero2
-
-  console.log(`O resultado da operação é ${subtracao}.`) 
+  const subtracao = numero1 - numero2 
     
   document.getElementById("resultadoSub").innerHTML = subtracao;
 }
@@ -39,8 +35,6 @@ function multiplicar() {
    Em seguida, ao invés de mostrar o numero 5, mostre o resultado da operação */
   
   const multiplicacao = numero1 * numero2
-
-  console.log(`O resultado da operação é ${multiplicacao}.`)
     
   document.getElementById("resultadoMult").innerHTML = multiplicacao;
 }
@@ -55,8 +49,6 @@ function dividir() {
    Em seguida, ao invés de mostrar o numero -89, mostre o resultado da operação */
   
   const divisao = numero1 / numero2
-
-  console.log(`O resultado da operação é ${divisao}.`) 
   
   document.getElementById("resultadoDiv").innerHTML = divisao;
 }

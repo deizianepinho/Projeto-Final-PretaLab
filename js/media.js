@@ -21,22 +21,41 @@ function calcularMedia() {
   let mensagem = "";
   // evite mexer no código acima!
   
-const media = Math.round(((nota1 + nota2 + nota3 + nota4) / 4) , 1);
+const media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-if (media < 0.1) {
+if (media === 0) {
   mensagem = 'Infelizmente você zerou a prova :('
-} else if ( media >= 0.1 && media <= 3) {
-  mensagem = `Caramba, deu ruim, você obteve media ${media}! Estude mais e tente novamente!`
-} else if (media >= 3.1 && media <= 5.9) {
-  mensagem = `Você obteve media ${media}! Falta pouco para a média.`
+} else if ( media > 0 && media <= 3) {
+  mensagem = `Caramba, deu ruim, você obteve média ${media}! Estude mais e tente novamente!`
+} else if (media > 3 && media < 6) {
+  mensagem = `Você obteve média ${media}! Falta pouco para a média.`
 } else if (media >= 6 && media <= 7) {
   mensagem = `Você está na média com ${media}.`
-} else if (media >= 7.1 && media <= 9.9) {
+} else if (media > 7 && media < 10) {
   mensagem = `Notão! Sua média é ${media}!`
-} else {
+} else if (media === 10) {
   mensagem = `Hoje é seu aniversário? Pq você ta de parabéns! 10 de média.`
+} else if (media > 10) {
+  mensagem = `Verifique se as notas estão corretas, pois a média deu acima de 10.`
+} else {
+  mensagem = `Preencha todas as notas para calcular a média corretamente.`
 }
-    
+   
+  /* Observação: Foram consideradas outras condições para alguns criérios para as mensagens dos resultados das médias,
+  pois alguns intervalos ficariam errados, como exemplo entre 3 e 3.1 não teria nenhum critério sendo atendido. 
+  Acredito que atenderia se conseguisse arredondar o resultado da média com uma casa decimal. Tentei fazer pela função
+  "Math.round()", mas só estava conseguindo deixar com apenas um número inteiro. 
+
+  Sendo assim, foram considerados diferente do solicitado os seguintes intervalos:
+  Entre 0.1 e 3, considerado > 0 e <= 3
+  Entre 3.1 e 5.9, considerado > 3 e < 6
+  Entre 7.1 e 9.9, considerado >7 e < 10
+  */
+
+  
+
   // evite mexer na linha de código abaixo!
   document.getElementById("situacaoAluno").innerHTML = mensagem;
 }
+
+/* Ver condição para maior que 10 */
